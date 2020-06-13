@@ -1,0 +1,5 @@
+{
+    "sketch": "StrangerThingsLights.ino",
+    "board": "arduino:avr:uno",
+    "port": "COM4"
+}

@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "command": "arduino.verify",
+      "id": "verify",
+      "type": "command"
+    }
+  ],
+  "tasks": [
+    {
+      "command": "echo ${input:verify}",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Arduino: Verify",
+      "type": "shell"
+    }
+  ],
+  "version": "2.0.0"
+}
