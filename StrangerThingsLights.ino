@@ -1,31 +1,35 @@
-#include <Adafruit_NeoPixel.h>
+#include <FastLED.h>
 
-#define DATA_PIN 7
+#define DATA_PIN 3
 #define NUM_LEDS 50
-#define COLOR_ORDER RGB
 
-Adafruit_NeoPixel strip(NUM_LEDS, DATA_PIN, NEO_RGB + NEO_KHZ800);
+CRGB leds[NUM_LEDS];
 
 void setup()
 {
-  strip.begin();
-  strip.setBrightness(1);
-  strip.show();
+  // Holiday Coro tells me the chip driving the lights is a UCS1903
+  // but the sticker on the strand says 2811/1903. Hmmmm. The UCS1903
+  // setting works.
+  //
+  // The strand also needs a 5V data signal. If you have the power
+  // plugged into the wall _while_ you're programming, all works
+  // well. If it's only plugged into USB, the data signal comes out
+  // at 3.3V and the strand goes haywire. Took me a full day to
+  // figure this out. Plug the stupid board into wall power.
+  FastLED.addLeds<UCS1903, DATA_PIN, RGB>(leds, NUM_LEDS);
 }
 
 void loop()
 {
-  colorWipe(strip.Color(255, 0, 0), 50); // Red
-  colorWipe(strip.Color(0, 255, 0), 50); // Green
-  colorWipe(strip.Color(0, 0, 255), 50); // Blue
+  colorWipe(CRGB::Red, 50);
+  colorWipe(CRGB::Blue, 50);
+  colorWipe(CRGB::Green, 50);
 }
 
-void colorWipe(uint32_t c, uint8_t wait)
-{
-  for (uint16_t i = 0; i < strip.numPixels(); i++)
-  {
-    strip.setPixelColor(i, c);
-    strip.show();
+void colorWipe(CRGB color, int wait) {
+  for(int i = 0; i < NUM_LEDS; i++) {
+    leds[i] = color;
+    FastLED.show();
     delay(wait);
   }
 }
