@@ -279,7 +279,6 @@ int lookupChar(char c)
 
 void initializeDefaults()
 {
-  // TODO: After glass bulbs are distributed, switch this to set up exact colors for each bulb.
   // I put physical C9 color glass bulbs over the LEDs for a more authentic
   // look. I also randomized how the C9 bulb colors were distributed. This means
   // the default color for each LED is different based on the color of the
@@ -291,39 +290,39 @@ void initializeDefaults()
   // Green bulbs - CRGB::Green
   // Purple bulbs - CRGB::Purple
   // Orange bulbs - CRGB::Orange
-  defaultColors[0] = CRGB::White;
-  defaultColors[1] = CRGB::White;
-  defaultColors[2] = CRGB::White;
-  defaultColors[3] = CRGB::White;
-  defaultColors[4] = CRGB::White;
-  defaultColors[5] = CRGB::White;
-  defaultColors[6] = CRGB::White;
-  defaultColors[7] = CRGB::White;
-  defaultColors[8] = CRGB::White;
-  defaultColors[9] = CRGB::White;
-  defaultColors[10] = CRGB::White;
-  defaultColors[11] = CRGB::White;
-  defaultColors[12] = CRGB::White;
-  defaultColors[13] = CRGB::White;
-  defaultColors[14] = CRGB::White;
-  defaultColors[15] = CRGB::White;
-  defaultColors[16] = CRGB::White;
-  defaultColors[17] = CRGB::White;
-  defaultColors[18] = CRGB::White;
-  defaultColors[19] = CRGB::White;
-  defaultColors[20] = CRGB::White;
-  defaultColors[21] = CRGB::White;
-  defaultColors[22] = CRGB::White;
-  defaultColors[23] = CRGB::White;
-  defaultColors[24] = CRGB::White;
-  defaultColors[25] = CRGB::White;
-  defaultColors[26] = CRGB::White;
-  defaultColors[27] = CRGB::White;
+  defaultColors[0] = CRGB::Red;
+  defaultColors[1] = CRGB::Blue;
+  defaultColors[2] = CRGB::Yellow;
+  defaultColors[3] = CRGB::Red;
+  defaultColors[4] = CRGB::Green;
+  defaultColors[5] = CRGB::Yellow;
+  defaultColors[6] = CRGB::Blue;
+  defaultColors[7] = CRGB::Orange;
+  defaultColors[8] = CRGB::Purple;
+  defaultColors[9] = CRGB::Green;
+  defaultColors[10] = CRGB::Red;
+  defaultColors[11] = CRGB::Yellow;
+  defaultColors[12] = CRGB::Blue;
+  defaultColors[13] = CRGB::Red;
+  defaultColors[14] = CRGB::Green;
+  defaultColors[15] = CRGB::Purple;
+  defaultColors[16] = CRGB::Yellow;
+  defaultColors[17] = CRGB::Red;
+  defaultColors[18] = CRGB::Green;
+  defaultColors[19] = CRGB::Orange;
+  defaultColors[20] = CRGB::Yellow;
+  defaultColors[21] = CRGB::Green;
+  defaultColors[22] = CRGB::Blue;
+  defaultColors[23] = CRGB::Purple;
+  defaultColors[24] = CRGB::Red;
+  defaultColors[25] = CRGB::Green;
+  defaultColors[26] = CRGB::Yellow;
+  defaultColors[27] = CRGB::Blue;
   defaultColors[28] = CRGB::White;
-  defaultColors[29] = CRGB::White;
-  defaultColors[30] = CRGB::White;
-  defaultColors[31] = CRGB::White;
-  defaultColors[32] = CRGB::White;
-  defaultColors[33] = CRGB::White;
-  defaultColors[34] = CRGB::White;
+  defaultColors[29] = CRGB::Green;
+  defaultColors[30] = CRGB::Yellow;
+  defaultColors[31] = CRGB::Blue;
+  defaultColors[32] = CRGB::Purple;
+  defaultColors[33] = CRGB::Red;
+  defaultColors[34] = CRGB::Yellow;
 }
