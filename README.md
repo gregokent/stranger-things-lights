@@ -4,9 +4,9 @@ I bought this tapestry sort of thing from the Halloween store that has the lette
 
 ![The tapestry thing](doc/tapestry.jpg)
 
-This sketch is based on several that I've seen around the place, but is specifically for my use case where the bulbs start a certain color (based on the best look for each given the glass bulb covering). Here's what it looks like when it's done:
+This sketch is based on several that I've seen around the place, but is specifically for my use case where the bulbs start a certain color (based on the best look for each given the glass bulb covering). [Here's a video showing what it looks like when it's done.](https://www.youtube.com/watch?v=nxTzynmiZcY)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nxTzynmiZcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![My lights - complete!](doc/st_lights_complete.gif)
 
 ## Making the Lights
 
