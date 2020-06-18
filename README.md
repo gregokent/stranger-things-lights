@@ -10,13 +10,13 @@ This sketch is based on several that I've seen around the place, but is specific
 
 ## Making the Lights
 
-I bought some lights from [HolidayCoro.com](http://holidaycoro.com) - specifically the [12V 6"-spaced RGB 2811](http://www.holidaycoro.com/6-Inch-Pixel-Node-String-Waterproof-Plug-12v-p/712-wp.htm) lights. I got these instead of the C9 bulb version because I wanted the bulbs to look like _actual colored glass bulbs_ rathre than clear bulbs with colored lights. I'm not interested in changing the colors of the bulbs _too much_ - I'm more interested in the ability to control the general look of each bulb and individually control them. I also specifically wanted something with a dark cord (black, in this case) and didn't want a whole bunch of extra lights (so 3" spacing is out - the 6" spacing is pretty good, though I wish I could have found 8" or so).
+I bought some lights from [HolidayCoro.com](http://holidaycoro.com) - specifically the [12V 6"-spaced RGB 2811](http://www.holidaycoro.com/6-Inch-Pixel-Node-String-Waterproof-Plug-12v-p/712-wp.htm) lights. I got these instead of the C9 bulb version because I wanted the bulbs to look like _actual colored glass bulbs_ rather than clear bulbs with colored lights. I'm not interested in changing the colors of the bulbs _too much_ - I'm more interested in the ability to control the general look of each bulb and individually control them. I also specifically wanted something with a dark cord (black, in this case) and didn't want a whole bunch of extra lights (so 3" spacing is out - the 6" spacing is pretty good, though I wish I could have found 8" or so).
 
 I bought a bunch of actual colored glass C9 bulbs from Amazon. I took a Dremel and cut the end of the metal part of the bulb off. Using needlenose pliers I broke out the center of the bulb with the filament. This leaves a hole in the base where you can insert the LED. You have to clean up some of the glue on the inside of the metal part of the bulb, but they will end up fitting snugly over the top of the LEDs. I took a bit of epoxy and glued them over the top of the LEDs.
 
 ![Glue the bulb over the top of the LED](doc/bulb_epoxy.jpg)
 
-I 3D printed some fake "sockets" that fit over the base of the lights once the bulbs are on. I used superglue to affix these bases over the lights. (I put the .stl files for the sockets in the `doc` folder.) I used a silver marker to mark the top of the light sockets to indicate which letter goes to which bulb. This makes it easier to test and program later, as well as ensuring when you hang the lights up you get it consistent.
+I 3D printed some fake "sockets" that fit over the base of the lights once the bulbs are on. I used superglue to affix these bases over the lights. (I put the `.stl` files for the sockets in the `doc` folder.) I used a silver marker to mark the top of the light sockets to indicate which letter goes to which bulb. This makes it easier to test and program later, as well as ensuring when you hang the lights up you get it consistent.
 
 ![Glue the sockets on the base of the bulbs](doc/glue_sockets.jpg)
 
