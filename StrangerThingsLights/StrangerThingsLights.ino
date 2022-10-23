@@ -17,7 +17,7 @@ void setup()
   // Took me a full day to figure this out. Plug the stupid board into wall
   // power.
   randomSeed(analogRead(0));
-  FastLED.addLeds<UCS1903, DATA_PIN, RGB>(leds, NUM_LEDS);
+  FastLED.addLeds<WS2811, DATA_PIN, RGB>(leds, NUM_LEDS);
   FastLED.setBrightness(128);
   initializeDefaults();
   showDefault();
@@ -26,7 +26,7 @@ void setup()
 void loop()
 {
   // Delay between crazy stuff happening.
-  delay(random(15, 30) * 1000);
+  FastLED.delay(random(15, 30) * 1000);
   int behavior = random(0, 7);
   switch (behavior)
   {
@@ -83,10 +83,10 @@ void sparkleOut()
   {
     leds[indices[i]] = CRGB::Black;
     FastLED.show();
-    delay(100);
+    FastLED.delay(100);
   }
 
-  delay(1000);
+  FastLED.delay(1000);
   fadeToDefault(10, 1000);
 }
 
@@ -99,7 +99,7 @@ void redpulse()
   }
 
   fadeToColor(CRGB::Red, 20, 1000);
-  delay(3000);
+  FastLED.delay(3000);
   fadeToDefault(20, 1000);
 }
 
@@ -121,7 +121,7 @@ void fadeToDefault(int fadeSteps, int ms)
     }
 
     FastLED.show();
-    delay(ms / fadeSteps);
+    FastLED.delay(ms / fadeSteps);
   }
 }
 
@@ -143,7 +143,7 @@ void fadeToColor(CRGB color, int fadeSteps, int ms)
     }
 
     FastLED.show();
-    delay(ms / fadeSteps);
+    FastLED.delay(ms / fadeSteps);
   }
 }
 
@@ -163,19 +163,19 @@ void message(char *text)
     {
       leds[index] = CRGB(defaultColors[index]);
       FastLED.show();
-      delay(1000);
+      FastLED.delay(1000);
       FastLED.clear();
       FastLED.show();
-      delay(250);
+      FastLED.delay(250);
     }
     else
     {
       // Space, punctuation, etc.
-      delay(1500);
+      FastLED.delay(1500);
     }
   }
 
-  delay(1000);
+  FastLED.delay(1000);
   fadeToDefault(10, 1000);
 }
 
@@ -325,6 +325,21 @@ void initializeDefaults()
   defaultColors[32] = CRGB::Purple;
   defaultColors[33] = CRGB::Red;
   defaultColors[34] = CRGB::Yellow;
+  defaultColors[35] = CRGB::Yellow;
+  defaultColors[36] = CRGB::Green;
+  defaultColors[37] = CRGB::Blue;
+  defaultColors[38] = CRGB::Purple;
+  defaultColors[39] = CRGB::Red;
+  defaultColors[40] = CRGB::Green;
+  defaultColors[41] = CRGB::Yellow;
+  defaultColors[42] = CRGB::Blue;
+  defaultColors[43] = CRGB::White;
+  defaultColors[44] = CRGB::Green;
+  defaultColors[45] = CRGB::Yellow;
+  defaultColors[46] = CRGB::Blue;
+  defaultColors[47] = CRGB::Purple;
+  defaultColors[48] = CRGB::Red;
+  defaultColors[49] = CRGB::Yellow;
 }
 
   const CRGB strange_colors[] = {
