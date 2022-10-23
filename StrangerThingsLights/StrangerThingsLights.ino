@@ -1,6 +1,6 @@
 #include <FastLED.h>
 
-#define DATA_PIN 3
+#define DATA_PIN D2
 #define NUM_LEDS 50
 
 CRGB leds[NUM_LEDS];
@@ -194,82 +194,82 @@ int lookupChar(char c)
   switch (c)
   {
   case 'a':
-    return 33;
+    return 48;
     break;
   case 'b':
-    return 32;
+    return 47;
     break;
   case 'c':
-    return 31;
+    return 45;
     break;
   case 'd':
-    return 30;
+    return 43;
     break;
   case 'e':
-    return 29;
+    return 41;
     break;
   case 'f':
-    return 28;
+    return 40;
     break;
   case 'g':
-    return 27;
+    return 38;
     break;
   case 'h':
-    return 26;
+    return 37;
     break;
   case 'i':
-    return 14;
-    break;
-  case 'j':
-    return 16;
-    break;
-  case 'k':
-    return 17;
-    break;
-  case 'l':
-    return 18;
-    break;
-  case 'm':
-    return 19;
-    break;
-  case 'n':
     return 20;
     break;
-  case 'o':
-    return 21;
-    break;
-  case 'p':
+  case 'j':
     return 22;
     break;
+  case 'k':
+    return 23;
+    break;
+  case 'l':
+    return 25;
+    break;
+  case 'm':
+    return 26;
+    break;
+  case 'n':
+    return 28;
+    break;
+  case 'o':
+    return 29;
+    break;
+  case 'p':
+    return 31;
+    break;
   case 'q':
-    return 24;
+    return 33;
     break;
   case 'r':
-    return 11;
+    return 17;
     break;
   case 's':
-    return 9;
+    return 15;
     break;
   case 't':
-    return 8;
+    return 13;
     break;
   case 'u':
-    return 7;
+    return 12;
     break;
   case 'v':
-    return 6;
+    return 11;
     break;
   case 'w':
-    return 5;
+    return 9;
     break;
   case 'x':
-    return 4;
+    return 7;
     break;
   case 'y':
-    return 3;
+    return 5;
     break;
   case 'z':
-    return 1;
+    return 3;
     break;
   default:
     return -1;
