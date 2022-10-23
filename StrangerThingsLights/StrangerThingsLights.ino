@@ -26,35 +26,61 @@ void setup()
 void loop()
 {
   // Delay between crazy stuff happening.
-  FastLED.delay(random(15, 30) * 1000);
-  int behavior = random(0, 7);
+      // message("abcdefghijklmnopqrstuvwxyz");
+  FastLED.delay(random(5, 10) * 1000);
+  int behavior = random(0, 8);
   switch (behavior)
   {
   case 0:
-    message("im here");
+    message("right here");
     break;
   case 1:
-    message("run");
+    message("trick or treat");
     break;
   case 2:
     message("help");
     break;
   case 3:
-    message("get out");
+    message("run");
     break;
   case 4:
     message("hide");
     break;
   case 5:
-    redpulse();
+    message("happy halloween leonard leopards");
     break;
   case 6:
+    redpulse();
+    break;
+  case 7:
     sparkleOut();
+    break;
+  case 8:
+    sparkle(7000);
     break;
   default:
     showDefault();
     break;
   }
+}
+
+void sparkle(int duration)
+{
+  int start = millis();
+  while( millis() - start < duration) {
+    for (int i = 0; i < NUM_LEDS; i++)
+    {
+      int on = random(0,10);
+      leds[i] = on < 7 ? defaultColors[i] : CRGB::Black;
+
+    }
+      FastLED.show();
+      FastLED.delay(100);
+  }
+
+  sparkleOut();
+  FastLED.delay(1000);
+  fadeToDefault(10, 1000);
 }
 
 void sparkleOut()
@@ -83,7 +109,7 @@ void sparkleOut()
   {
     leds[indices[i]] = CRGB::Black;
     FastLED.show();
-    FastLED.delay(100);
+    FastLED.delay(70);
   }
 
   FastLED.delay(1000);
@@ -163,20 +189,20 @@ void message(char *text)
     {
       leds[index] = CRGB(defaultColors[index]);
       FastLED.show();
-      FastLED.delay(1000);
+      FastLED.delay(1250);
       FastLED.clear();
       FastLED.show();
-      FastLED.delay(250);
+      FastLED.delay(500);
     }
     else
     {
       // Space, punctuation, etc.
-      FastLED.delay(1500);
+      FastLED.delay(1250);
     }
   }
 
   FastLED.delay(1000);
-  fadeToDefault(10, 1000);
+  fadeToDefault(20, 1000);
 }
 
 void showDefault()
@@ -194,82 +220,82 @@ int lookupChar(char c)
   switch (c)
   {
   case 'a':
-    return 48;
-    break;
-  case 'b':
     return 47;
     break;
+  case 'b':
+    return 46;
+    break;
   case 'c':
-    return 45;
+    return 44;
     break;
   case 'd':
-    return 43;
+    return 42;
     break;
   case 'e':
-    return 41;
-    break;
-  case 'f':
     return 40;
     break;
-  case 'g':
-    return 38;
+  case 'f':
+    return 39;
     break;
-  case 'h':
+  case 'g':
     return 37;
     break;
+  case 'h':
+    return 36;
+    break;
   case 'i':
-    return 20;
+    return 19;
     break;
   case 'j':
-    return 22;
+    return 21;
     break;
   case 'k':
-    return 23;
+    return 22;
     break;
   case 'l':
-    return 25;
+    return 24;
     break;
   case 'm':
-    return 26;
+    return 25;
     break;
   case 'n':
-    return 28;
+    return 27;
     break;
   case 'o':
-    return 29;
+    return 28;
     break;
   case 'p':
-    return 31;
+    return 30;
     break;
   case 'q':
-    return 33;
+    return 32;
     break;
   case 'r':
-    return 17;
+    return 16;
     break;
   case 's':
-    return 15;
+    return 14;
     break;
   case 't':
-    return 13;
-    break;
-  case 'u':
     return 12;
     break;
-  case 'v':
+  case 'u':
     return 11;
     break;
+  case 'v':
+    return 10;
+    break;
   case 'w':
-    return 9;
+    return 8;
     break;
   case 'x':
-    return 7;
+    return 6;
     break;
   case 'y':
-    return 5;
+    return 4;
     break;
   case 'z':
-    return 3;
+    return 2;
     break;
   default:
     return -1;
