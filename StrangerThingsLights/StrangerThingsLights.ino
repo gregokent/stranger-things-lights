@@ -1,7 +1,7 @@
 #include <FastLED.h>
 
 #define DATA_PIN 3
-#define NUM_LEDS 35
+#define NUM_LEDS 50
 
 CRGB leds[NUM_LEDS];
 CRGB defaultColors[NUM_LEDS];
@@ -326,3 +326,9 @@ void initializeDefaults()
   defaultColors[33] = CRGB::Red;
   defaultColors[34] = CRGB::Yellow;
 }
+
+  const CRGB strange_colors[] = {
+    CRGB::Bisque, CRGB::MediumBlue, CRGB::Indigo, CRGB::GreenYellow, CRGB::DodgerBlue, CRGB::Goldenrod, CRGB::Indigo, CRGB::GreenYellow, 
+    CRGB::GreenYellow, CRGB::Indigo, CRGB::MediumBlue, CRGB::GreenYellow, CRGB::Goldenrod, CRGB::Indigo, CRGB::Indigo, CRGB::GreenYellow, CRGB::Indigo,
+    CRGB::GreenYellow, CRGB::Bisque, CRGB::Goldenrod, CRGB::MediumBlue, CRGB::Indigo, CRGB::MediumBlue, CRGB::Goldenrod, CRGB::Indigo, CRGB::Indigo
+  };
